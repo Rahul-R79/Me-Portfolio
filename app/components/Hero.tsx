@@ -4,7 +4,6 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Link from "next/link";
 import { MouseEvent } from "react";
 import { HiArrowRight } from "react-icons/hi";
-import Scene from "./Scene";
 
 export default function Hero() {
     const mouseX = useMotionValue(0);
@@ -21,8 +20,6 @@ export default function Hero() {
             className="relative flex min-h-screen flex-col items-center justify-end overflow-hidden px-4 pb-12 md:px-8 md:pb-24"
             onMouseMove={handleMouseMove}
         >
-            {/* 3D Background Image */}
-            <Scene />
 
             {/* Spotlight Effect */}
             <motion.div
