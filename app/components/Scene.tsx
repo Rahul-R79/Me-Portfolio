@@ -5,11 +5,7 @@ import { useGLTF, Environment, Float, OrbitControls, ScrollControls, useScroll, 
 import { useRef, useState } from "react";
 import * as THREE from "three";
 
-interface ModelProps {
-    setEnableOrbit: (enable: boolean) => void;
-}
-
-function Model({ setEnableOrbit }: ModelProps) {
+function Model() {
     // Load the GLTF model
     const { scene } = useGLTF("/human head 3d model.glb");
     const meshRef = useRef<THREE.Group>(null);
@@ -41,7 +37,6 @@ function Model({ setEnableOrbit }: ModelProps) {
         // Continuous rotation when at the very top (idle state)
         if (scrollOffset < 0.01) {
             meshRef.current.rotation.y += 0.005;
-            setEnableOrbit(false); // Disable manual control
         } else {
             // Scroll-driven rotation
             let rotationY;
@@ -56,13 +51,6 @@ function Model({ setEnableOrbit }: ModelProps) {
                 rotationY = THREE.MathUtils.lerp(0, -Math.PI / 2 - 0.2, r1);
             }
             meshRef.current.rotation.y = rotationY;
-
-            // Enable manual OrbitControls only when the scroll animation is fully complete
-            if (r1 >= 1) {
-                setEnableOrbit(true);
-            } else {
-                setEnableOrbit(false);
-            }
         }
 
         // Scale Logic: Responsive scaling for mobile vs desktop
@@ -86,8 +74,6 @@ export default function Scene({ children }: { children: React.ReactNode }) {
 }
 
 function SceneContent({ children }: { children: React.ReactNode }) {
-    const [orbitEnabled, setOrbitEnabled] = useState(false);
-
     return (
         <div className="h-screen w-full bg-black">
             {/* Canvas is the 3D scene container */}
@@ -99,7 +85,7 @@ function SceneContent({ children }: { children: React.ReactNode }) {
                 <ScrollControls pages={3} damping={1.0}>
                     {/* Float adds a gentle hovering animation to the model */}
                     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
-                        <Model setEnableOrbit={setOrbitEnabled} />
+                        <Model />
                     </Float>
 
                     {/* Scroll component wraps the actual HTML page content */}
@@ -109,8 +95,6 @@ function SceneContent({ children }: { children: React.ReactNode }) {
                 </ScrollControls>
 
                 <Environment preset="city" />
-                {/* OrbitControls are conditionally enabled based on scroll position */}
-                <OrbitControls enabled={orbitEnabled} enableZoom={false} enablePan={false} />
             </Canvas>
         </div>
     );
