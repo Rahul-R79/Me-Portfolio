@@ -20,6 +20,12 @@ body,
     scrollbar-width: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
 /* Chrome, Safari, Opera */
 ::-webkit-scrollbar {
     display: none;

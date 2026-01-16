@@ -3,6 +3,7 @@
 import Scene from "./components/Scene";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="h-screen" /> {/* Space for scroll transition */}
         <About />
       </Scene>
+      <Skills />
     </main>
   );
 }

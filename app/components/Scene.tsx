@@ -75,14 +75,14 @@ export default function Scene({ children }: { children: React.ReactNode }) {
 
 function SceneContent({ children }: { children: React.ReactNode }) {
     return (
-        <div className="h-screen w-full bg-black">
+        <div className="h-screen w-full bg-black snap-start">
             {/* Canvas is the 3D scene container */}
             <Canvas className="h-full w-full" camera={{ position: [0, 0, 5], fov: 45 }}>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={1} />
 
                 {/* ScrollControls manages the HTML overlay scroll and syncs with 3D animation */}
-                <ScrollControls pages={3} damping={1.0}>
+                <ScrollControls pages={3.5} damping={1.0}>
                     {/* Float adds a gentle hovering animation to the model */}
                     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
                         <Model />
