@@ -79,7 +79,7 @@ export default function Skills() {
     const x5 = useSpring(x5Raw, springConfig);
 
     return (
-        <section className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden bg-white px-4 py-24 text-black md:px-8 snap-start">
+        <section className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden bg-white px-4 py-24 text-black md:px-8 snap-start" id="skills">
 
             {/* Parallax Background Icons */}
             <div ref={containerRef} className="absolute inset-x-0 bottom-0 top-24 md:top-40 z-0 flex flex-col justify-between md:justify-center gap-0 md:gap-20 py-20 md:py-20 opacity-20 pointer-events-none">

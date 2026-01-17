@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi";
+import { SiLeetcode } from "react-icons/si";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 
@@ -38,16 +39,16 @@ export default function Navbar() {
                 {/* Desktop Links */}
                 <div className="hidden items-center gap-8 md:flex">
                     <Link
-                        href="/"
+                        href="#home"
                         className="text-sm font-medium text-white/70 transition-colors hover:text-white"
                     >
                         Home
                     </Link>
                     <Link
-                        href="#about"
+                        href="#skills"
                         className="text-sm font-medium text-white/70 transition-colors hover:text-white"
                     >
-                        About
+                        Skills
                     </Link>
                     <Link
                         href="#work"
@@ -82,6 +83,15 @@ export default function Navbar() {
                         aria-label="LinkedIn"
                     >
                         <FaLinkedin size={20} />
+                    </a>
+                    <a
+                        href="https://leetcode.com/Rahul_dev_LC/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/70 transition-colors hover:text-white"
+                        aria-label="LeetCode"
+                    >
+                        <SiLeetcode size={20} />
                     </a>
                     <a
                         href="/Rahul_Resume.pdf"

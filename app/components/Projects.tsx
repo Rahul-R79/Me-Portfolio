@@ -171,7 +171,7 @@ export default function Projects() {
     const badgeRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
     return (
-        <section className="text-white">
+        <section id="work" className="text-white">
             {/* Part 1: Horizontal Scroll Showcase */}
             <div ref={targetRef} className="relative h-[300vh] bg-[var(--foreground)]">
                 <div className="sticky top-0 flex h-screen items-center overflow-hidden">

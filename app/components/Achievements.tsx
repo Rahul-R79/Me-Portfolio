@@ -46,7 +46,7 @@ export default function Achievements() {
     }, []);
 
     return (
-        <section className="relative z-10 mx-auto max-w-7xl px-4 py-24 md:px-8 text-white">
+        <section className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 text-white">
             <div className="mb-12 text-center">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">Impact & Contributions.</h2>
                 <p className="mt-4 text-lg text-gray-400">Beyond the code: Awards, Open Source, and Activity Stats.</p>
