@@ -12,8 +12,18 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Rahul - Portfolio",
+  title: "Rahul | Software Engineer",
   description: "Personal portfolio website",
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
