@@ -13,17 +13,9 @@ const projects = [
         github: "https://github.com/Rahul-R79/n8n-Automated-Lead-Management-System",
         demo: "https://n8n-automated-lead-management-syste.vercel.app/"
     },
+
     {
         id: 2,
-        title: "Porticade Builders",
-        description: "Developed a high-performance corporate website for a leading construction firm in Kerala. The platform showcases their portfolio, services, and expertise through a modern, responsive design that enhances brand trust and client engagement.",
-        tech: ["React", "Tailwind", "EmailJS", "Framer Motion"],
-        image: "/images/project-sliding-images/2.png",
-        github: "https://github.com/Rahul-R79/Porticade-Builders",
-        demo: "https://porticadebuilders.com/"
-    },
-    {
-        id: 3,
         title: "Dev Blogs",
         description: "A scalable microservices-based blogging platform architected with gRPC for efficient inter-service communication. Containerized with Docker and orchestrated for high availability, demonstrating advanced backend patterns.",
         tech: ["Node.js", "gRPC", "Docker", "Microservices", "TypeScript", "React", "Tailwind", "Nginx", "Kubernetes", "Prisma"],
@@ -32,7 +24,7 @@ const projects = [
         demo: "https://blog-v1-dev.vercel.app/"
     },
     {
-        id: 4,
+        id: 3,
         title: "UpsideDown",
         description: "A visually immersive Stranger Things inspired web experience featuring an interactive 'flashlight' reveal effect. Move your cursor to explore the Upside Down and reveal the true face of Vecna.",
         tech: ["html", "tailwind", "javascript"],
@@ -41,7 +33,7 @@ const projects = [
         demo: "https://rahul-r79.github.io/UpsideDown/"
     },
     {
-        id: 5,
+        id: 4,
         title: "FoodSnap AI",
         description: "FoodSnap AI is a smart nutrition tracking application that leverages artificial intelligence to analyze food images, identify dishes, and estimate their nutritional content.",
         tech: ["gemini", "tailwind", "react", "node.js", "mongodb", "typescript", "edamam food api"],
@@ -50,7 +42,7 @@ const projects = [
         demo: "https://foodsnap-ai-five.vercel.app/"
     },
     {
-        id: 6,
+        id: 5,
         title: "The C.L.A.U.S. Console",
         description: "The C.L.A.U.S. Console (Command Logic & Authorized User System) is the comprehensive digital transformation initiative for toy logistics (Hackathon Project).",
         tech: ["google model viewer", "tailwind", "react", "node.js", "firebase", "typescript", "three.js", "gemini", "tripo AI", "framer motion"],
@@ -59,13 +51,30 @@ const projects = [
         demo: "https://claus-console.vercel.app/"
     },
     {
-        id: 7,
+        id: 6,
         title: "FlowWell",
         description: "FlowWell is a comprehensive workflow management platform that streamlines project planning, execution, and monitoring.",
         tech: ["bootstrap", "javascript", "react", "node.js", "mongodb", "hugging face", "framer motion"],
         image: "/images/project-sliding-images/7.png",
         github: "https://github.com/Rahul-R79/FlowWell---The-Period-Care",
         demo: "https://flow-well-the-period-care.vercel.app/"
+    },
+    {
+        id: 7,
+        title: "Chat With My Resume",
+        description: "An AI-powered chatbot that lets recruiters and visitors 'talk' to my resume. Built with a RAG architecture, it uses Google Gemini for reasoning and MongoDB Vector Search for retrieving relevant professional context.",
+        tech: ["React.js", "Tailwind CSS", "Node.js", "LangChain.js", "Google Gemini", "MongoDB Atlas"],
+        image: "/images/project-sliding-images/8.png",
+        github: "https://github.com/Rahul-R79/Chat-With-My-Resume",
+    },
+    {
+        id: 8,
+        title: "PathPulse",
+        description: "Next-Gen Indoor Navigation System for Large Complexes. An advanced indoor wayfinding application designed for universities, hospitals, corporate offices, and airports. Feature rich with AI Smart Search and Offline PWA support.",
+        tech: ["React", "TailwindCSS", "Node.js", "Gemini AI", "Cloudinary", "PWA"],
+        image: "/images/project-sliding-images/9.png",
+        github: "https://github.com/Rahul-R79/PathPulse",
+        demo: "https://path-pulse-vert.vercel.app/"
     }
 ];
 
@@ -235,7 +244,7 @@ export default function Projects() {
                                     rotate: 0
                                 }}
                                 transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
-                                viewport={{ margin: "-100px" }} 
+                                viewport={{ margin: "-100px" }}
                                 className="relative h-[250px] w-[85vw] shrink-0 overflow-hidden rounded-3xl border border-white/20 bg-gray-900/5 shadow-2xl backdrop-blur-sm transition-transform hover:scale-105 md:h-[300px] md:w-[450px] lg:h-[380px] lg:w-[600px]"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 transition-opacity duration-500 hover:opacity-100 z-10" />
